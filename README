@@ -1,0 +1,85 @@
+sox
+-------------------------------------------
+SoX (also known as Sound eXchange) translates sound files between
+different file formats, and optionally applies various sound effects.
+
+SoX is intended as the Swiss Army knife of sound processing tools.  It
+doesn't do anything very well, but sooner or later it comes in very
+handy.
+
+Runtime requirements:
+  cygwin-1.5.19-4
+  libmad-0.15.1b-2
+  libmp3lame0-3.96.1-1
+  libogg0-1.1.2-1
+  libvorbis0-1.1.1-1
+  libvorbisenc2-1.1.1-1
+  libvorbisfile3-1.1.1-1
+
+Build requirements:
+(besides corresponding -devel packages)
+  cygwin-1.5.19-4
+  autoconf2.5-2.59-3
+  binutils-20050610-1
+  cygport-0.1.92-1
+  gawk-3.1.5-2
+  gcc-core-3.4.4-1
+  make-3.80-1
+  sed-4.1.4-1
+
+Canonical homepage:
+  http://sox.sourceforge.net/
+
+Canonical download:
+  http://prdownloads.sourceforge.net/sox/
+
+-------------------------------------------
+
+Build instructions:
+  unpack sox-12.18.1-1-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./sox-12.18.1-1.cygport all
+
+This will create:
+  /usr/src/sox-12.18.1-1-src.tar.bz2
+  /usr/src/sox-12.18.1-1.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary package:
+
+  /usr/bin/play
+  /usr/bin/rec
+  /usr/bin/sox.exe
+  /usr/bin/soxmix.exe
+  /usr/share/doc/Cygwin/sox-12.18.1.README
+  /usr/share/doc/sox-12.18.1/ChangeLog
+  /usr/share/doc/sox-12.18.1/INSTALL
+  /usr/share/doc/sox-12.18.1/LICENSE
+  /usr/share/doc/sox-12.18.1/README
+  /usr/share/doc/sox-12.18.1/TODO
+  /usr/share/man/man1/sox.1.gz
+  /usr/share/man/man1/soxexam.1.gz
+  /usr/share/man/man1/soxmix.1
+
+------------------
+
+Port Notes:
+
+----- version 12.18.1-1 -----
+Version bump.
+
+----- version 12.17.9-1 -----
+Version bump.
+
+----- version 12.17.8-1 -----
+Version bump.
+
+----- version 12.17.5-1 -----
+Initial release for Cygwin.
+
+
+Cygwin port maintained by:
+http://cygwinports.dotsrc.org/
