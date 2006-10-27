@@ -8,7 +8,8 @@ doesn't do anything very well, but sooner or later it comes in very
 handy.
 
 Runtime requirements:
-  cygwin-1.5.19-4
+  cygwin-1.5.21-2
+  libgsm0-1.0.12-1
   libmad-0.15.1b-2
   libmp3lame0-3.96.1-1
   libogg0-1.1.2-1
@@ -18,14 +19,14 @@ Runtime requirements:
 
 Build requirements:
 (besides corresponding -devel packages)
-  cygwin-1.5.19-4
-  autoconf2.5-2.59-3
-  binutils-20050610-1
-  cygport-0.1.92-1
+  cygwin-1.5.21-2
+  autoconf2.5-2.60-1
+  binutils-20060817-1
+  cygport-0.2.6-1
   gawk-3.1.5-2
   gcc-core-3.4.4-1
-  make-3.80-1
-  sed-4.1.4-1
+  make-3.81-1
+  sed-4.1.5-1
 
 Canonical homepage:
   http://sox.sourceforge.net/
@@ -36,15 +37,15 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack sox-12.18.1-1-src.tar.bz2
+  unpack sox-12.18.2-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./sox-12.18.1-1.cygport all
+  cygport ./sox-12.18.2-X.cygport all
 
 This will create:
-  /usr/src/sox-12.18.1-1-src.tar.bz2
-  /usr/src/sox-12.18.1-1.tar.bz2
+  /usr/src/sox-12.18.2-X-src.tar.bz2
+  /usr/src/sox-12.18.2-X.tar.bz2
 
 -------------------------------------------
 
@@ -54,12 +55,12 @@ Files included in the binary package:
   /usr/bin/rec
   /usr/bin/sox.exe
   /usr/bin/soxmix.exe
-  /usr/share/doc/Cygwin/sox-12.18.1.README
-  /usr/share/doc/sox-12.18.1/ChangeLog
-  /usr/share/doc/sox-12.18.1/INSTALL
-  /usr/share/doc/sox-12.18.1/LICENSE
-  /usr/share/doc/sox-12.18.1/README
-  /usr/share/doc/sox-12.18.1/TODO
+  /usr/share/doc/Cygwin/sox-12.18.2.README
+  /usr/share/doc/sox-12.18.2/ChangeLog
+  /usr/share/doc/sox-12.18.2/INSTALL
+  /usr/share/doc/sox-12.18.2/LICENSE
+  /usr/share/doc/sox-12.18.2/README
+  /usr/share/doc/sox-12.18.2/TODO
   /usr/share/man/man1/sox.1.gz
   /usr/share/man/man1/soxexam.1.gz
   /usr/share/man/man1/soxmix.1
@@ -67,6 +68,9 @@ Files included in the binary package:
 ------------------
 
 Port Notes:
+
+----- version 12.18.2-1 -----
+Version bump, depends on external libgsm0.
 
 ----- version 12.18.1-1 -----
 Version bump.

@@ -1,5 +1,5 @@
 category: Audio
-requires: cygwin libmad libmp3lame0 libogg0 libvorbis0 libvorbisenc2 libvorbisfile3
+requires: cygwin libgsm0 libmad libmp3lame0 libogg0 libvorbis0 libvorbisenc2 libvorbisfile3
 sdesc: "Sound processing tool"
 ldesc: "SoX (also known as Sound eXchange) translates sound files between
 different file formats, and optionally applies various sound effects.
