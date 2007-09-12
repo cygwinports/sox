@@ -1,6 +1,7 @@
 category: Audio
-requires: cygwin libsox
-sdesc: "Sound processing tool (CLI)"
+requires: cygwin libFLAC8 libavcodec51 libavformat51 libavutil49 libgsm0 libltdl3 libmad libmp3lame0 libogg0 libsamplerate0 libsndfile1 libvorbis0 libvorbisenc2 libvorbisfile3
+external-source: sox
+sdesc: "Sound processing tool (runtime lib)"
 ldesc: "SoX (also known as Sound eXchange) translates sound files between
 different file formats, and optionally applies various sound effects.
 
