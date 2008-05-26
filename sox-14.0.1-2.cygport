@@ -1,0 +1,14 @@
+DESCRIPTION="Swiss army knife of sound processing programs"
+HOMEPAGE="http://sox.sourceforge.net/"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+
+PKG_NAMES="${PN} lib${PN} lib${PN}-devel"
+PKG_HINTS="setup lib devel"
+PKG_CONTENTS[0]='--exclude=*.dll --exclude=man3 usr/bin/ usr/share/'
+PKG_CONTENTS[1]='usr/bin/*.dll usr/lib/sox/'
+PKG_CONTENTS[2]='usr/include/ usr/lib/lib* usr/share/man/man3/'
+
+DIFF_EXCLUDES="soxconfig.h"
+
+CYGCONF_ARGS="--disable-static --disable-alsa --disable-libao
+	--disable-sun-audio --without-ladspa"

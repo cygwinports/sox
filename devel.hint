@@ -1,5 +1,5 @@
 category: Audio
-requires: cygwin libsox libsamplerate-devel libtool1.5
+requires: cygwin libsox libsamplerate-devel libtool
 external-source: sox
 sdesc: "Sound processing tool (development)"
 ldesc: "SoX (also known as Sound eXchange) translates sound files between
