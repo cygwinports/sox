@@ -1,0 +1,11 @@
+--- origsrc/sox-14.2.0/configure.ac	2008-11-07 11:54:28.000000000 -0600
++++ src/sox-14.2.0/configure.ac	2008-11-10 22:28:37.310029300 -0600
+@@ -109,7 +109,7 @@
+       *linux* | *solaris*)
+         LDFLAGS="$LDFLAGS -Wl,-z,defs"
+         ;;
+-      *os2*)
++      *cygwin* | *os2*)
+         APP_LDFLAGS="-no-undefined"
+         ;;
+     esac
