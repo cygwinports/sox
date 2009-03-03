@@ -11,17 +11,17 @@ Runtime requirements:
   cygwin-1.5.25-15
   file-4.21-1
   libao2-0.8.8-3
-  libavcodec51-13777-1
-  libavformat52-13777-1
-  libavutil49-13777-1
+  libavcodec52-17736-1
+  libavformat52-17736-1
+  libavutil49-17736-1
   libFLAC8-1.2.1-2
   libgsm0-1.0.12-1
   libid3tag0-0.15.1b-5
   libmad0-0.15.1b-5
   libmp3lame0-3.98.2-1
   libogg0-1.1.3-1
-  libpng12-1.2.33-1
-  libsamplerate0-0.1.2-1
+  libpng12-1.2.34-1
+  libsamplerate0-0.1.7-1
   libsndfile1-1.0.17-2
   libvorbis0-1.2.0-2
   libvorbisenc2-1.2.0-2
@@ -32,13 +32,13 @@ Runtime requirements:
 Build requirements:
 (besides corresponding -devel packages)
   autoconf2.5-2.63-1
-  automake1.10-1.10.1-1
+  automake1.10-1.10.1-2
   binutils-20080624-2
-  cygport-0.4.2-1
+  cygport-0.4.3-1
   gawk-3.1.6-1
   gcc-core-3.4.4-3
   libtool-2.2.6a-1
-  make-3.81-1
+  make-3.81-2
   pkg-config-0.23a-2
   sed-4.1.5-2
 
@@ -100,6 +100,9 @@ Files included in the binary packages:
 ------------------
 
 Port Notes:
+
+----- version 14.2.0-2 -----
+Rebuilt for FFmpeg API changes.
 
 ----- version 14.2.0-1 -----
 Version bump.
