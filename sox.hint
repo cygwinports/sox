@@ -1,5 +1,5 @@
 category: Audio
-requires: libsox1
+requires: libgcc1 libgomp1 libsox1
 sdesc: "Sound processing tool (apps)"
 ldesc: "SoX (also known as Sound eXchange) translates sound files between
 different file formats, and optionally applies various sound effects.

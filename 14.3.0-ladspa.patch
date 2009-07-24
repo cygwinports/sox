@@ -1,0 +1,19 @@
+lt_dlopenext will try adding the system module extension if 'name' doesn't
+resolve.  But on Cygwin that's ".dll" and LADSPA plugins use ".so".
+
+--- origsrc/sox-14.3.0/src/ladspa.c	2009-02-07 01:32:51.000000000 -0600
++++ src/sox-14.3.0/src/ladspa.c	2009-07-23 23:41:05.389798100 -0500
+@@ -104,10 +104,12 @@ static int sox_ladspa_getopts(sox_effect
+   if (path == NULL)
+     path = LADSPA_PATH;
+   lt_dlsetsearchpath(path);
+-  if ((l_st->lth = lt_dlopenext(l_st->name)) == NULL) {
++  if ((l_st->lth = lt_dlopen(l_st->name)) == NULL) {
++    if ((l_st->lth = lt_dlopen(strcat(strdup(l_st->name), ".so"))) == NULL) {
+     lsx_fail("could not open LADSPA plugin %s", l_st->name);
+     return SOX_EOF;
+   }
++  }
+ 
+   /* Get descriptor function */
+   if ((ltptr.ptr = lt_dlsym(l_st->lth, "ladspa_descriptor")) == NULL) {
