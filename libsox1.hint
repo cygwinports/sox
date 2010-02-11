@@ -1,5 +1,5 @@
 category: Audio
-requires: file libao2 libavcodec52 libavformat52 libavutil49 libFLAC8 libgcc1 libgomp1 libgsm0 libid3tag0 libltdl7 libmad0 libmp3lame0 libogg0 libpng12 libsndfile1 libvorbis0 libvorbisenc2 libvorbisfile3 libwavpack1 zlib0
+requires: file libao2 libavcodec52 libavformat52 libavutil50 libFLAC8 libgcc1 libgomp1 libgsm1 libid3tag0 libltdl7 libmad0 libmp3lame0 libogg0 libpng12 libsndfile1 libvorbis0 libvorbisenc2 libvorbisfile3 libwavpack1 zlib0
 external-source: sox
 sdesc: "Sound processing tool (runtime lib)"
 ldesc: "SoX (also known as Sound eXchange) translates sound files between

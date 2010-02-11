@@ -8,39 +8,39 @@ doesn't do anything very well, but sooner or later it comes in very
 handy.
 
 Runtime requirements:
-  cygwin-1.5.25-15
-  file-5.0.0-3
-  libao2-0.8.8-3
-  libavcodec52-0.5-1
-  libavformat52-0.5-1
-  libavutil49-0.5-1
-  libFLAC8-1.2.1-1
-  libgcc1-4.3.2-2
-  libgomp1-4.3.2-2
+  cygwin-1.7.1-1
+  file-5.00-3
+  libao2-0.8.8-1
+  libavcodec52-20100207-1
+  libavformat52-20100207-1
+  libavutil50-20100207-1
+  libFLAC8-1.2.1-2
+  libgcc1-4.3.4-3
+  libgomp1-4.3.4-3
   libgsm1-1.0.13-1
   libid3tag0-0.15.1b-10
-  libltdl7-2.2.7a-14
+  libltdl7-2.2.7a-15
   libmad0-0.15.1b-10
   libmp3lame0-3.98.2-10
-  libogg0-1.1.3-1
-  libpng12-1.2.35-1
+  libogg0-1.1.4-1
+  libpng12-1.2.35-10
   libsndfile1-1.0.19-10
-  libvorbis0-1.2.0-2
-  libvorbisenc2-1.2.0-2
-  libvorbisfile3-1.2.0-2
-  libwavpack1-4.50.1-10
+  libvorbis0-1.2.3-1
+  libvorbisenc2-1.2.3-1
+  libvorbisfile3-1.2.3-1
+  libwavpack1-4.60.1-1
   zlib0-1.2.3-10
 
 Build requirements:
 (besides corresponding -devel packages)
-  autoconf2.5-2.63-10
-  automake1.10-1.10.2-10
+  autoconf2.5-2.65-1
+  automake1.10-1.10.3-1
   binutils-2.19.51-1
-  cygport-0.9.8-1
-  gawk-3.1.6-2
-  gcc4-core-4.3.2-2
+  cygport-0.9.80-1
+  gawk-3.1.7-1
+  gcc4-core-4.3.4-3
   ladspa-sdk-1.13-10
-  libtool-2.2.7a-14
+  libtool-2.2.7a-15
   make-3.81-2
   pkg-config-0.23b-10
   sed-4.1.5-2
@@ -68,40 +68,10 @@ This will create:
 
 -------------------------------------------
 
-Files included in the binary packages:
-
-(sox)
-  /usr/bin/play
-  /usr/bin/rec
-  /usr/bin/sox.exe
-  /usr/bin/soxi
-  /usr/share/doc/sox/AUTHORS
-  /usr/share/doc/sox/COPYING
-  /usr/share/doc/sox/ChangeLog
-  /usr/share/doc/sox/NEWS
-  /usr/share/doc/sox/README
-  /usr/share/man/man1/play.1.gz
-  /usr/share/man/man1/rec.1.gz
-  /usr/share/man/man1/sox.1.gz
-  /usr/share/man/man1/soxi.1.gz
-  /usr/share/man/man7/soxeffect.7.gz
-  /usr/share/man/man7/soxformat.7.gz
-
-(libsox1)
-  /usr/bin/cygsox-1.dll
-
-(libsox-devel)
-  /usr/include/sox.h
-  /usr/include/soxstdint.h
-  /usr/lib/libsox.a
-  /usr/lib/libsox.dll.a
-  /usr/lib/libsox.la
-  /usr/lib/pkgconfig/sox.pc
-  /usr/share/man/man3/libsox.3.gz
-
-------------------
-
 Port Notes:
+
+----- version 14.3.0-2 -----
+Rebuilt for ffmpeg update.
 
 ----- version 14.3.0-1 -----
 Initial release for Cygwin 1.7.
