@@ -1,0 +1,10 @@
+--- origsrc/sox-14.3.2/src/ladspa.c	2011-02-18 22:40:16.000000000 -0600
++++ src/sox-14.3.2/src/ladspa.c	2011-08-10 17:17:19.651876000 -0500
+@@ -105,6 +105,7 @@ static int sox_ladspa_getopts(sox_effect
+     path = LADSPA_PATH;
+ 
+   if(lt_dlinit() || lt_dlsetsearchpath(path)
++      || (l_st->lth = lt_dlopen(strcat(strdup(l_st->name), ".so"))) == NULL
+       || (l_st->lth = lt_dlopenext(l_st->name)) == NULL) {
+     lsx_fail("could not open LADSPA plugin %s", l_st->name);
+     return SOX_EOF;

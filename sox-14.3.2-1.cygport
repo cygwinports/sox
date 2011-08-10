@@ -2,7 +2,7 @@ DESCRIPTION="Swiss army knife of sound processing programs"
 HOMEPAGE="http://sox.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 PATCH_URI="14.2.0-no-undefined.patch
-           14.3.0-ladspa.patch"
+           14.3.2-ladspa.patch"
 
 PKG_NAMES="sox libsox1 libsox-devel"
 sox_CONTENTS='--exclude=*.dll --exclude=man3 usr/bin/ usr/share/'
