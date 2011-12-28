@@ -1,0 +1,37 @@
+DESCRIPTION="Swiss army knife of sound processing programs"
+HOMEPAGE="http://sox.sourceforge.net/"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+PATCH_URI="14.2.0-no-undefined.patch
+           14.3.2-ladspa.patch"
+
+PKG_NAMES="sox libsox1 libsox-devel"
+sox_CONTENTS='--exclude=*.dll --exclude=man3 usr/bin/ usr/share/'
+libsox1_CONTENTS="usr/bin/cygsox-1.dll"
+libsox_devel_CONTENTS='usr/include/ usr/lib/lib* usr/lib/pkgconfig/ usr/share/man/man3/'
+
+for l in ao flac pulseaudio wavpack
+do
+	PKG_NAMES+=" sox-fmt-${l}"
+	declare sox_fmt_${l}_CONTENTS="usr/lib/sox/cygsox_fmt_${l}.dll"
+done
+
+DISTCLEANFILES="src/soxconfig.h"
+
+CYGCONF_ARGS="
+	--disable-static
+	--with-distro=Cygwin
+	--with-ao=dyn
+	--with-flac=dyn
+	--with-pulseaudio=dyn
+	--with-wavpack=dyn
+	--without-alsa
+	--without-amrnb
+	--without-amrwb
+	--without-coreaudio
+	--without-ffmpeg
+	--without-mp3 --without-id3tag --without-lame --without-mad
+	--without-sndio
+	--without-sunaudio
+"
+
+KEEP_LA_FILES="none"

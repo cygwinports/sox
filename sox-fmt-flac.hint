@@ -1,7 +1,7 @@
 category: Audio
-requires: libsox1
+requires: libsox1 libgcc1 libFLAC8
 external-source: sox
-sdesc: "Sound processing tool (development)"
+sdesc: "Sound processing tool (FLAC plugin)"
 ldesc: "SoX (also known as Sound eXchange) translates sound files between
 different file formats, and optionally applies various sound effects.
 
