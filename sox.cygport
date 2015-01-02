@@ -1,5 +1,5 @@
 NAME="sox"
-VERSION=14.4.0
+VERSION=14.4.1
 RELEASE=1
 CATEGORY="Audio"
 SUMMARY="Sound processing toolkit"
@@ -9,18 +9,25 @@ SoX is intended as the Swiss Army knife of sound processing tools.  It
 doesn't do anything very well, but sooner or later it comes in very
 handy."
 HOMEPAGE="http://sox.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
-PATCH_URI="14.4.0-no-undefined.patch
-           14.3.2-ladspa.patch"
+#SRC_URI="mirror://sourceforge/sox/sox-${VERSION}.tar.gz"
+md5sum=ca5845928846e13e9d5cb6de6831f05e
+SRC_URI="http://pkgs.fedoraproject.org/repo/pkgs/sox/sox-${VERSION}.modified.tar.gz/${md5sum}/sox-${VERSION}.modified.tar.gz"
+PATCH_URI="
+	http://pkgs.fedoraproject.org/cgit/sox.git/plain/sox-14.4.1-lpc10.patch
+	http://pkgs.fedoraproject.org/cgit/sox.git/plain/sox-mcompand_clipping.patch
+	14.4.0-no-undefined.patch
+	14.3.2-ladspa.patch
+"
 
 PKG_NAMES="sox libsox2 libsox-devel"
 sox_CONTENTS='--exclude=*.dll --exclude=man3 usr/bin/ usr/share/'
 libsox2_SUMMARY="${SUMMARY} (runtime library)"
+libsox2_OBSOLETES="sox-fmt-flac sox-fmt-wavpack"
 libsox2_CONTENTS="usr/bin/cygsox-2.dll"
 libsox_devel_SUMMARY="${SUMMARY} (development)"
 libsox_devel_CONTENTS='usr/include/ usr/lib/lib* usr/lib/pkgconfig/ usr/share/man/man3/'
 
-for l in ao flac pulseaudio wavpack
+for l in ao pulseaudio
 do
 	PKG_NAMES+=" sox-fmt-${l}"
 	declare sox_fmt_${l}_SUMMARY="${SUMMARY} (${l} plugin)"
@@ -33,14 +40,13 @@ CYGCONF_ARGS="
 	--disable-static
 	--with-distro=Cygwin
 	--with-ao=dyn
-	--with-flac=dyn
 	--with-pulseaudio=dyn
-	--with-wavpack=dyn
 	--without-alsa
 	--without-amrnb
 	--without-amrwb
 	--without-coreaudio
 	--without-ffmpeg
+	--without-lpc10
 	--without-mp3 --without-id3tag --without-lame --without-mad
 	--without-sndio
 	--without-sunaudio
