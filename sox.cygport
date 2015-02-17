@@ -1,6 +1,6 @@
 NAME="sox"
 VERSION=14.4.1
-RELEASE=1
+RELEASE=2
 CATEGORY="Audio"
 SUMMARY="Sound processing toolkit"
 DESCRIPTION="SoX (also known as Sound eXchange) translates sound files between
@@ -15,6 +15,8 @@ SRC_URI="http://pkgs.fedoraproject.org/repo/pkgs/sox/sox-${VERSION}.modified.tar
 PATCH_URI="
 	http://pkgs.fedoraproject.org/cgit/sox.git/plain/sox-14.4.1-lpc10.patch
 	http://pkgs.fedoraproject.org/cgit/sox.git/plain/sox-mcompand_clipping.patch
+	http://pkgs.fedoraproject.org/cgit/sox.git/plain/0001-Check-for-minimum-size-sphere-headers.patch?h=f21
+	http://pkgs.fedoraproject.org/cgit/sox.git/plain/0002-More-checks-for-invalid-MS-ADPCM-blocks.patch?h=f21
 	14.4.0-no-undefined.patch
 	14.3.2-ladspa.patch
 "
