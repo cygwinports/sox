@@ -1,6 +1,6 @@
 NAME="sox"
 VERSION=14.4.2
-RELEASE=1
+RELEASE=2
 CATEGORY="Audio"
 SUMMARY="Sound processing toolkit"
 DESCRIPTION="SoX (also known as Sound eXchange) translates sound files between
@@ -21,7 +21,7 @@ PATCH_URI="
 PKG_NAMES="sox libsox3 libsox-devel"
 sox_CONTENTS='--exclude=*.dll --exclude=man3 usr/bin/ usr/share/'
 libsox3_SUMMARY="${SUMMARY} (runtime library)"
-libsox3_OBSOLETES="sox-fmt-flac sox-fmt-wavpack"
+libsox3_OBSOLETES="sox-fmt-flac sox-fmt-mp3 sox-fmt-wavpack"
 libsox3_CONTENTS="usr/bin/cygsox-3.dll"
 libsox_devel_SUMMARY="${SUMMARY} (development)"
 libsox_devel_CONTENTS='usr/include/ usr/lib/lib* usr/lib/pkgconfig/ usr/share/man/man3/'
@@ -45,7 +45,7 @@ CYGCONF_ARGS="
 	--without-amrwb
 	--without-coreaudio
 	--without-lpc10
-	--without-mp3 --without-id3tag --without-lame --without-mad
+	--without-lame
 	--without-sndio
 	--without-sunaudio
 	--without-twolame
