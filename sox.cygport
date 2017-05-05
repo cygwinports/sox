@@ -1,6 +1,6 @@
 NAME="sox"
 VERSION=14.4.2
-RELEASE=2
+RELEASE=3
 CATEGORY="Audio"
 SUMMARY="Sound processing toolkit"
 DESCRIPTION="SoX (also known as Sound eXchange) translates sound files between
@@ -45,10 +45,7 @@ CYGCONF_ARGS="
 	--without-amrwb
 	--without-coreaudio
 	--without-lpc10
-	--without-lame
 	--without-sndio
 	--without-sunaudio
 	--without-twolame
 "
-
-KEEP_LA_FILES="none"
