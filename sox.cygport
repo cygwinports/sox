@@ -1,6 +1,6 @@
 NAME="sox"
 VERSION=14.4.2
-RELEASE=3
+RELEASE=4
 CATEGORY="Audio"
 SUMMARY="Sound processing toolkit"
 DESCRIPTION="SoX (also known as Sound eXchange) translates sound files between
@@ -13,7 +13,10 @@ HOMEPAGE="http://sox.sourceforge.net/"
 md5sum=a46ec45bbc1b11987423ea9b51ab927d
 SRC_URI="http://pkgs.fedoraproject.org/repo/pkgs/sox/sox-${VERSION}.modified.tar.gz/${md5sum}/sox-${VERSION}.modified.tar.gz"
 PATCH_URI="
-	http://pkgs.fedoraproject.org/cgit/sox.git/plain/sox-14.4.1-lpc10.patch
+	http://pkgs.fedoraproject.org/cgit/rpms/sox.git/plain/sox-14.4.2-lsx_symbols.patch
+	http://pkgs.fedoraproject.org/cgit/rpms/sox.git/plain/sox-14.4.2-lpc10.patch
+	http://pkgs.fedoraproject.org/cgit/rpms/sox.git/plain/sox-14.4.2-bug_1500554_fix.patch
+	http://pkgs.fedoraproject.org/cgit/rpms/sox.git/plain/sox-14.4.2-bug_1500570_fix.patch
 	14.4.2-no-undefined.patch
 	14.3.2-ladspa.patch
 "
@@ -47,5 +50,4 @@ CYGCONF_ARGS="
 	--without-lpc10
 	--without-sndio
 	--without-sunaudio
-	--without-twolame
 "
