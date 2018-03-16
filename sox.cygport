@@ -1,6 +1,6 @@
 NAME="sox"
 VERSION=14.4.2
-RELEASE=4
+RELEASE=5
 CATEGORY="Audio"
 SUMMARY="Sound processing toolkit"
 DESCRIPTION="SoX (also known as Sound eXchange) translates sound files between
@@ -11,12 +11,14 @@ handy."
 HOMEPAGE="http://sox.sourceforge.net/"
 #SRC_URI="mirror://sourceforge/sox/sox-${VERSION}.tar.gz"
 md5sum=a46ec45bbc1b11987423ea9b51ab927d
-SRC_URI="http://pkgs.fedoraproject.org/repo/pkgs/sox/sox-${VERSION}.modified.tar.gz/${md5sum}/sox-${VERSION}.modified.tar.gz"
+SRC_URI="http://src.fedoraproject.org/repo/pkgs/sox/sox-${VERSION}.modified.tar.gz/${md5sum}/sox-${VERSION}.modified.tar.gz"
 PATCH_URI="
-	http://pkgs.fedoraproject.org/cgit/rpms/sox.git/plain/sox-14.4.2-lsx_symbols.patch
-	http://pkgs.fedoraproject.org/cgit/rpms/sox.git/plain/sox-14.4.2-lpc10.patch
-	http://pkgs.fedoraproject.org/cgit/rpms/sox.git/plain/sox-14.4.2-bug_1500554_fix.patch
-	http://pkgs.fedoraproject.org/cgit/rpms/sox.git/plain/sox-14.4.2-bug_1500570_fix.patch
+	http://src.fedoraproject.org/cgit/rpms/sox.git/plain/sox-14.4.2-lsx_symbols.patch
+	http://src.fedoraproject.org/cgit/rpms/sox.git/plain/sox-14.4.2-lpc10.patch
+	http://src.fedoraproject.org/cgit/rpms/sox.git/plain/sox-14.4.2-bug_1500554_fix.patch
+	http://src.fedoraproject.org/cgit/rpms/sox.git/plain/sox-14.4.2-bug_1500570_fix.patch
+	http://src.fedoraproject.org/cgit/rpms/sox.git/plain/sox-14.4.2-bug_1500553_fix.patch
+	http://src.fedoraproject.org/cgit/rpms/sox.git/plain/sox-14.4.2-bug_1510923_fix.patch
 	14.4.2-no-undefined.patch
 	14.3.2-ladspa.patch
 "
